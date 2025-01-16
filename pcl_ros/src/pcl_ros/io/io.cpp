@@ -41,10 +41,12 @@
 //#include <pcl_ros/subscriber.h>
 #include <nodelet_topic_tools/nodelet_mux.h>
 #include <nodelet_topic_tools/nodelet_demux.h>
+#include <nodelet_topic_tools/nodelet_throttle.h>
 
 typedef nodelet::NodeletMUX<sensor_msgs::PointCloud2, message_filters::Subscriber<sensor_msgs::PointCloud2> > NodeletMUX;
 //typedef nodelet::NodeletDEMUX<sensor_msgs::PointCloud2, pcl_ros::Subscriber<sensor_msgs::PointCloud2> > NodeletDEMUX;
 typedef nodelet::NodeletDEMUX<sensor_msgs::PointCloud2> NodeletDEMUX;
+typedef nodelet_topic_tools::NodeletThrottle<sensor_msgs::PointCloud2> NodeletThrottle;
 
 //#include "pcd_io.cpp"
 //#include "bag_io.cpp"
@@ -53,5 +55,6 @@ typedef nodelet::NodeletDEMUX<sensor_msgs::PointCloud2> NodeletDEMUX;
 
 PLUGINLIB_EXPORT_CLASS(NodeletMUX,nodelet::Nodelet)
 PLUGINLIB_EXPORT_CLASS(NodeletDEMUX,nodelet::Nodelet)
+PLUGINLIB_EXPORT_CLASS(NodeletThrottle,nodelet::Nodelet)
 //PLUGINLIB_EXPORT_CLASS(NodeletDEMUX_ROS,nodelet::Nodelet);
 

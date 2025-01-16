@@ -14,6 +14,12 @@
     </description>
   </class>
 
+  <class name="pcl/NodeletThrottle" type="NodeletThrottle" base_class_type="nodelet::Nodelet">
+    <description>
+      NodeletThrottle represent a throttle nodelet for PointCloud topics.
+    </description>
+  </class>
+
   <class name="pcl/PCDReader" type="PCDReader" base_class_type="nodelet::Nodelet">
     <description>
       PCDReader reads in a PCD (Point Cloud Data) v.5 file from disk and converts it to a PointCloud message.
